@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >14 Empire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="14empirelogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><img src="14empirelogo.png" alt="14 Empire Icon" class="custom-icon">14 Empire</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to 14 Empire</h2>
+        <p>Experience the finest cuisine in a luxurious setting.</p>
+        <a href="http://zoma.to/r/18947261" target="_blank" class="cta-button">Order Now</a>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <img src="menu-img.jpg" alt="Dish Menu">
+        </div>
+    </section>
+
+    <section id ="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="picture1.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture2.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture3.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture5.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture6.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture7.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture8.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture9.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture10.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture11.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture12.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture13.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture14.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture15.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture16.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture17.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture18.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+            <div class="gallery-item"><img src="picture19.jpg" alt="Gallery Image" onclick="openFullScreen(this)"></div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeFullScreen()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +918114568033</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bailey Road & Jagdeo Path, Rukanpura, Patna, Bihar 801506</p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.947924896374!2d85.06762257439176!3d25.606646614996738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57b67ff61461%3A0x355798f6f410ea40!2sBailey%20Road%20%26%20Jagdeo%20Path%2C%20Rukanpura%2C%20Patna%2C%20Bihar%20801506!5e0!3m2!1sen!2sin!4v1741095965420!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About <span style="color: aqua;"><img src="14empirelogo.png" alt="14 Empire Icon" class="custom-icon">14 Empire</span></h2>
+        <div class="about-content">
+            <p>14 Empire started on 15th June of 2017 to bring change in the restaurant industry in Patna. 14 Empire is totally a 
+                contemporary concept bringing music and food together and making it more happening place in Patna. With 14 Empire we have brought a 
+                change in the restaurant industry in Bihar where we have live music which happens on weekends and we call different artists to perform. Our cuisine is totally fusion to blend with the taste of India.</p>
+       </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 14 Empire. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openFullScreen(img) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("fullImage").src = img.src;
+            document.body.classList.add("modal-open");
+        }
+    
+        function closeFullScreen() {
+            document.getElementById("imageModal").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+    
+        window.onclick = function(event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                closeFullScreen();
+            }
+        };
+
+        document.onkeydown = function(event) {
+            if (event.key === "Escape") {
+                closeFullScreen();
+            }
+        };
+    </script>
+</body>
+</html>
